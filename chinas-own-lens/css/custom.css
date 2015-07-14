@@ -1,0 +1,491 @@
+html {
+  position: relative;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  background-color: #000000;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  color: #d72928;
+}
+
+a:hover {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.navbar-default {
+  background-color: #333333;
+  border: none;
+  height: 70px;
+}
+
+#map {
+  position: relative;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  height: calc(100% - 292px);
+  top: 40px;
+}
+
+#gallery {
+  position: relative;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  height: calc(100% - 110px);
+  top: 40px;
+  background-color: #cccccc;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus {
+  color: #ffffff;
+  background-color: #d72928;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+  color: #cccccc;
+  background-color: #d72928;
+}
+
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: #cccccc;
+}
+
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.nav>li>a:visited {
+  color: #ffffff;
+}
+
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+  margin-left: 0px;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #cccccc;
+  margin-left: 0px;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+  margin-left: 0px;
+  font-size: 28px;
+  font-weight: 100;
+  margin-top: 8px;
+}
+
+.navbar-default .navbar-text {
+  color: #ffffff;
+  margin-top: -13px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.navbar-nav {
+  margin-right: 15px;
+}
+
+p#footer-text.text-muted {
+  color: #ffffff;
+  margin-top: 10px;
+  margin-left: 15px;
+  float: left;
+}
+
+#cddl-logo {
+  float: right;
+  padding-top: 6px;
+  padding-left: 20px;
+  margin-right: 16px;
+}
+
+#photoPanel {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  margin: 0 auto;
+}
+
+#photoPanelOpen {
+  background-color: #d72928;
+  color: #ffffff;
+  cursor: pointer;
+  padding-left: 16px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  margin-bottom: 0px;
+  width: 106px;
+  bottom: 0px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border: 1px solid #666666;
+  right: 0px;
+  margin-right: 16px;
+  padding-right: 4px;
+  margin-left: -moz-calc(100% - 122px);
+  margin-left: -webkit-calc(100% - 122px);
+  margin-left: -o-calc(100% - 122px);
+  margin-left: calc(100% - 122px);
+}
+
+#photoPanelContent {
+  background: #333333;
+  width: 100%;
+  height: 182px;
+  color: #ffffff;
+  line-height: 18px;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 8px;
+  float: left;
+}
+
+#filterCheckboxes {
+  display: none;
+  width: 135px;
+}
+
+#showAllMenu {
+  width: 135px;
+}
+
+#showAllMenuForm {
+  width: 135px;
+}
+
+#filterCheckboxesForm {
+  width: 135px;
+}
+
+#goToGallery {
+  background-color: #d72928;
+  color: #ffffff;
+  cursor: pointer;
+  padding-left: 16px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  margin-left: calc(100% - 176px);
+  margin-right: 16px;
+  margin-bottom: 0px;
+  margin-top: 12px;
+  width: 144px;
+  border-radius: 4px;
+}
+
+#goToGallery a {
+  color: #ffffff;
+}
+
+#footerContainer {
+  float: left;
+}
+
+.dark.leaflet-container {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+
+.dark.leaflet-container a {
+  color: #ffffff;
+}
+
+.dark.leaflet-container a:hover {
+  color: #d72928;
+}
+
+.checkboxes label {
+  font-weight: normal;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkboxes input {
+  vertical-align: middle;
+  margin-top: 0px;
+}
+
+.checkboxes label span {
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-right: 3px;
+  color: #999999;
+}
+
+.checkboxes {
+  top: 72px;
+  padding-top: 8px;
+  margin-left: 10px;
+  position: relative;
+  z-index: 1000;
+  height: 30px;
+  color: #ffffff;
+  width: auto;
+  width: 150px;
+}
+
+#filterbox label {
+  font-weight: normal;
+  font-size: 14px;
+  cursor: pointer;
+  color: #999999;
+}
+
+#filterbox input {
+  vertical-align: middle;
+  margin-top: 0px;
+}
+
+#filterbox label span {
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-right: 3px;
+}
+
+form {
+  height: auto;
+  padding-top: 5px;
+  padding-left: 6px;
+  padding-bottom: 6px;
+  padding-right: 6px;
+  background-color: rgba(51,51,51,.85);
+  text-align: left;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+input[name="pollutiondata"] {
+  display:none;
+}
+
+input[name="pollutiondata"] + span:before {
+  font-family: 'FontAwesome';
+  padding-right: 3px;
+  font-size: 14px;
+}
+
+input[name="pollutiondata"] + span:before {
+  content: ""; /* check-empty */
+  color: #999999;
+}
+
+input[name="pollutiondata"]:checked + span {
+  color: #ffffff;
+}
+
+input[name="pollutiondata"]:checked + span:before {
+  content: ""; /* check */
+  color: #ffffff;
+}
+
+input[name="category"] {
+  display:none;
+}
+
+input[name="category"] + span:before {
+  font-family: 'FontAwesome';
+  padding-right: 3px;
+  font-size: 14px;
+}
+
+input[name="category"] + span:before {
+  content: ""; /* check-empty */
+  color: #999999;
+}
+
+input[name="category"]:checked + span {
+  color: #ffffff;
+}
+
+input[name="category"]:checked + span:before {
+  content: ""; /* check */
+  color: #ffffff;
+}
+
+hr {
+  margin-top: 4px;
+  margin-bottom: 6px;
+  border-color: #999999;
+}
+
+.resized {
+  width: 100%;
+}
+
+.modal-title {
+  color: #333333;
+}
+
+.modal-content {
+  background-color: #333333;
+}
+
+.modal-footer {
+  border-top: 0px;
+}
+
+.modal-header {
+  border-bottom: 0px;
+  color: #ffffff;
+}
+
+.modal-body {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: #000000;
+}
+
+.modal-dialog {
+  margin-top: 90px;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #d72928;
+  border-color: #d72928;
+}
+
+.btn-primary:hover {
+  color: #cccccc;
+  background-color: #d72928;
+  border-color: #d72928;
+}
+
+p.postDesc {
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+p.postDesc span{
+  color: #d72928;
+}
+
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.close:hover {
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #ccc;
+  opacity: 0.9;
+}
+
+#panelHelp {
+  background-color: #333333;
+  color: #ffffff;
+  padding-top: 6px;
+  padding-left: 12px;
+  padding-bottom: 1px;
+}
+
+.highlighted {
+  outline: 6px solid #d72928;
+  outline-offset: -6px;
+}
+
+.modal-body.row {
+  margin-top: 16px;
+}
+
+#aboutModalContent {
+  background-image: url(http://localhost/china-dev/data/all/picture_airpollution_67.jpg);
+}
+
+.fa-angle-double-right {
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+#exampleModalLabel.modal-title {
+  color: #ffffff;
+}
+
+.thumb {
+    background: #cecece;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+.thumb a img {
+    position:relative;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.leaflet-marker-pane {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+  #main-logo {
+    width: 285px;
+    margin-top: 8px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #main-logo {
+    width: 225px;
+    margin-top: 8px;
+    margin-left: 15px;
+  }
+}
+
+.navbar>.container-fluid .navbar-brand {
+  margin-top: 0px;
+  padding-top: 12px;
+  padding-left: 0px;
+}
+
+.navbar-default .navbar-collapse {
+  background-color: #333;
+}

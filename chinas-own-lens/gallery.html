@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weibo China</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="China - CDDL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/custom.css"/>
+  <link rel="stylesheet" href="css/main_gallery.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand show-modal" href="#">Pollution Through China's Own Lens</a><br>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Map</a></li>
+            <li class="active"><a href="#">Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div id="viewport">
+    <div id="inner-wrapper">
+      <div id="filterbox">
+        <div id="filters" class="button-group">
+          <form style="background-color: #000000">
+            <label><input type="radio" name='category' data-filter="*" checked><span>Show all Pictures</span></input></label>
+            <label><input type="radio" name='category' data-filter=".activechimney"><span>#ActiveChimney</span></input></label>
+            <label><input type="radio" name='category' data-filter=".airpollution"><span>#AirPollution</span></input></label>
+            <label><input type="radio" name='category' data-filter=".algalbloom"><span>#AlgalBloom</span></input></label>
+            <label><input type="radio" name='category' data-filter=".haze"><span>#Haze</span></input></label>
+            <label><input type="radio" name='category' data-filter=".opensewers"><span>#OpenSewers</span></input></label>
+            <label><input type="radio" name='category' data-filter=".particulatematter"><span>#ParticulateMatter</span></input></label>
+            <label><input type="radio" name='category' data-filter=".PM2_5"><span>#PM2.5</span></input></label>
+            <label><input type="radio" name='category' data-filter=".pollution"><span>#Pollution</span></input></label>
+            <label><input type="radio" name='category' data-filter=".pollutionpics"><span>#PollutionPics</span></input></label>
+            <label><input type="radio" name='category' data-filter=".sandstorm"><span>#Sandstorm</span></input></label>
+            <label><input type="radio" name='category' data-filter=".sewage"><span>#Sewage</span></input></label>
+            <label><input type="radio" name='category' data-filter=".smog"><span>#Smog</span></input></label>
+            <label><input type="radio" name='category' data-filter=".soot"><span>#Soot</span></input></label>
+            <label><input type="radio" name='category' data-filter=".takepollutionpics"><span>#TakePollutionPics</span></input></label>
+            <label><input type="radio" name='category' data-filter=".yellowdust"><span>#YellowDust</span></input></label>
+        </form> 
+        </div>
+      </div>
+      <div class="imageContainer"></div>
+<!--       <div> -->
+      <ul id = "listPages" class="pagination">
+<!--         <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li> -->
+      </ul>
+      <!-- </div> -->
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id='spinnerModal'></div>
+<!--     <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" id="aboutModalContent">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="aboutModalLabel" style="font-size: 24px">Pollution Through China's Own Lens</h4>
+          </div>
+          <div class="modal-body" style="font-size: 18px">About this Project</div>
+          <div class="modal-body row">
+          <div class="modal-body col-md-7">This project portrays the different factors of pollution in China through the Chinese social media site Weibo. Weibo is a popular microblogging forum, similar to Twitter, that ostensibly allows individuals a channel for self-expression. The project aims to show the depiction of the politically sensitive topic of pollution through the use of crowdsourced social media data (via Weibo) in order to visually understand the conditions on the ground in the country and to understand the extent to which the topic of pollution is censored. <a href="http://www.civicdatadesignlab.org/">Read more...</a></div>
+          <div class="modal-body col-md-5"><img style='width:210px' src="http://localhost/china-dev/data/all/picture_algalbloom_14.jpg"></div>
+          </div>
+          <div class="modal-body row">
+            <div class="modal-body col-md-7">- The Data Action Project Team<br>
+              Wenfei Xu, <em>Researcher</em><br>
+              Mike Foster, <em>GIS/Data Visualization Specialist</em><br>
+              Sarah Williams, <em>Director - Civic Data Design Lab</em></div>
+            <div class="modal-body col-md-5"><p style="margin-bottom: 5px">A project of the:</p><a href="http://www.civicdatadesignlab.org/"><img src="img/cddl-white.png" alt="CDDL"></a><br></div>
+          </div>
+          <div class="modal-footer" style="margin-top: 8px">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Go to Map</button></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+</body>
+<footer class="navbar-default navbar-fixed-bottom" style="height: 60px;" id="footerContainer">
+
+  <div id="footerContainerInner" class="container-fluid">
+    <p id="footer-text" class="text-muted">Data Action Project &copy;2015  <i class="fa fa-angle-double-right"></i>  <a href='#' class='show-modal'>About the Project</a></p>
+    <div id="cddl-logo">
+      <a href="http://www.civicdatadesignlab.org/"><img src="img/cddl-white.png" alt="CDDL"></a>
+    </div>
+  </div>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.js" type="text/javascript"></script>
+  <script src="http://fgnass.github.io/spin.js/spin.min.js"></script>
+  <script src="js/main_gallery.js"></script>
+  <script src="https://rawgit.com/tuupola/jquery_lazyload/master/jquery.lazyload.js"></script>
+</html>
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weibo China</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="China - CDDL">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/v2.1.8/mapbox.css"/>
+  <link rel="stylesheet" href="lib/MarkerCluster.css">
+  <link rel="stylesheet" href="lib/MarkerCluster.default.css">
+  <link rel="stylesheet" href="lib/owl.carousel.css">
+  <link rel="stylesheet" href="lib/owl.theme.css">
+  <link rel="stylesheet" href="css/custom.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand show-modal" href="#"><img id="main-logo" src="img/main-logo.png" class="img-responsive" alt="main-logo"></a><br>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Map</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="checkboxes">
+      <div id="showAllMenu">
+        <form id="showAllMenuForm">
+          <label style="margin-bottom: 0px;"><input id="showAll" type="radio" name="pollutiondata" value="showAll" checked><span>Show All Pictures</span></label><br>
+          <label><input id="openFilters" type="radio" name="pollutiondata" value="openFilters"><span>Filter by Category</span></label><br>
+        </form>
+      </div>
+      <div id="filterCheckboxes">
+        <form id="filterCheckboxesForm">
+          <label style="margin-bottom: 0px;"><input id="activeChimney" type="radio" name="pollutiondata" value="activechimney"><span>#activeChimney</span></label><br>
+          <label style="margin-bottom: 0px;"><input id="airPollution" type="radio" name="pollutiondata" value="airpollution"><span>#airPollution</span></label><br>
+          <label style="margin-bottom: 0px;"><input id="algalBloom" type="radio" name="pollutiondata" value="algalBloom"><span>#algalBloom</span></label><br>
+          <label style="margin-bottom: 0px;"><input id="haze" type="radio" name="pollutiondata" value="haze"><span>#haze</span></label><br>
+          <label style="margin-bottom: 0px;"><input id="particulatematter" type="radio" name="pollutiondata" value="particulatematter"><span>#particulateMatter</span></label><br>
+          <label style="margin-bottom: 0px;"><input id="pm25" type="radio" name="pollutiondata" value="PM2_5"><span>#pm25</span></label><br>
+          <label style="margin-bottom: 0px;"><input id="pollution" type="radio" name="pollutiondata" value="pollution"><span>#pollution</span></label><br>
+          <label style="margin-bottom: 0px;"><input id="pollutionPics" type="radio" name="pollutiondata" value="pollutionpics"><span>#pollutionPics</span></label><br>
+          <label style="margin-bottom: 0px;"><input id="sewage" type="radio" name="pollutiondata" value="sewage"><span>#sewage</span></label><br>
+          <label style="margin-bottom: 0px;"><input id="smog" type="radio" name="pollutiondata" value="smog"><span>#smog</span></label><br>
+          <label style="margin-bottom: 0px;"><input id="soot" type="radio" name="pollutiondata" value="soot"><span>#soot</span></label><br>
+          <label style="margin-bottom: 0px;"><input id="takepollutionpics" type="radio" name="pollutiondata" value="takepollutionpics"><span>#takePollutionPics</span></label><br>
+          <label style="margin-bottom: 0px; margin-right: 0px;"><input id="yellowDust" type="radio" name="pollutiondata" value="yellowdust"><span>#yellowDust</span></label>
+        </form>
+      </div>
+    </div>
+    <div id="map" class="dark"></div>
+    <div id="photoPanel" style="bottom: 40px">
+        <p id="photoPanelOpen">Hide Posts</p>
+        <div id="photoDashboard">
+          <div id="photoPanelContent">
+            <div id="postGallery" class="owl-carousel">
+            </div>
+          </div>        
+        </div>
+      </div>
+    <div class="modal" id='spinnerModal'></div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" id="aboutModalContent">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="aboutModalLabel" style="font-size: 24px">Pollution Through China's Own Lens</h4>
+          </div>
+          <div class="modal-body" style="font-size: 18px">About this Project</div>
+          <div class="modal-body row">
+          <div class="modal-body col-md-7">This project portrays the different factors of pollution in China through the Chinese social media site Weibo. Weibo is a popular microblogging forum, similar to Twitter, that ostensibly allows individuals a channel for self-expression. The project aims to show the depiction of the politically sensitive topic of pollution through the use of crowdsourced social media data (via Weibo) in order to visually understand the conditions on the ground in the country and to understand the extent to which the topic of pollution is censored.</div>
+          <div class="modal-body col-md-5"><img style='width:210px' src="http://localhost/china-dev/data/all/picture_algalbloom_14.jpg"></div>
+          </div>
+          <div class="modal-body row">
+            <div class="modal-body col-md-7">- The Data Action Project Team<br>
+              Wenfei Xu, <em>Researcher</em><br>
+              Mike Foster, <em>GIS/Data Visualization Specialist</em><br>
+              Sarah Williams, <em>Director - Civic Data Design Lab</em></div>
+            <div class="modal-body col-md-5"><p style="margin-bottom: 5px; margin-top: 4px;">A project of the:</p><a href="http://www.civicdatadesignlab.org/"><img src="img/cddl-black.png" alt="CDDL"></a><p style="margin-top: 5px;"><a href="http://www.civicdatadesignlab.org/">More about the lab</a></p></div>
+          </div>
+          <div class="modal-footer" style="margin-top: 8px">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Go to Project</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="navbar-default navbar-fixed-bottom" id="footerContainer" style="height: 40px">
+  		<div id="footerContainerInner" class="container-fluid">
+  			<p id="footer-text" class="text-muted">Data Action Project &copy;2015  <i class="fa fa-angle-double-right"></i>  <a href='#' class='show-modal'>About the Project</a></p>
+        <div id="cddl-logo">
+          <a href="http://www.civicdatadesignlab.org/"><img src="img/cddl-white.png" alt="CDDL"></a>
+        </div>
+  		</div>
+    </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://api.tiles.mapbox.com/mapbox.js/v2.1.8/mapbox.js"></script>
+  <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js"></script>
+  <script src="lib/leaflet.markercluster.js"></script>
+  <script src="lib/owl.carousel.js"></script>
+  <script src="lib/js.cookie.js"></script>
+  <script src="lib/leaflet-hash.js"></script>  
+  <script src="js/main.js"></script>
+</body>
+</html>
+
