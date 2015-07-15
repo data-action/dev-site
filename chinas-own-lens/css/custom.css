@@ -38,6 +38,20 @@ a:hover {
   top: 40px;
 }
 
+div.modal-footer p a {
+  color: #ccc;
+}
+
+div.modal-footer p a:hover {
+  text-decoration: underline;
+}
+
+div.modal-footer p {
+  color: #ccc;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
 #gallery {
   position: relative;
   width: 100%;
@@ -430,7 +444,7 @@ p.postDesc span{
 }
 
 #aboutModalContent {
-  background-image: url(http://localhost/china-dev/data/all/picture_airpollution_67.jpg);
+  background-image: url(http://data-action.github.io/chinas-own-lens/data/all/picture_airpollution_67.jpg);
 }
 
 .fa-angle-double-right {
@@ -488,4 +502,8 @@ p.postDesc span{
 
 .navbar-default .navbar-collapse {
   background-color: #333;
+}
+
+a.item.link:hover {
+  color: #fff;
 }
