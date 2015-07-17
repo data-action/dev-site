@@ -145,7 +145,7 @@
             <div class="row">
 
                 <!-- Post #6 - Pollution Through China's Own Lens -->
-                <div class="col-md-4 col-sm-6 portfolio-item">
+<!--                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -159,10 +159,10 @@
                         <p class="text-muted">July 15, 2015</p>
                     </div>
                 </div>
-
+ -->
                 <!-- Post #5 - Pollution Through China's Own Lens -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -191,8 +191,7 @@
                         <p class="text-muted">Feb 27, 2015</p>
                     </div>
                 </div>
-            </div>
-            <div class="row">                
+
                 <!-- Post #3- Cleveland Suburban History -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
@@ -208,6 +207,9 @@
                         <p class="text-muted">Feb 20, 2015</p>
                     </div>
                 </div>
+            </div>
+            <div class="row">                
+
                 <div class="col-md-4 col-sm-6 portfolio-item">
                 <!-- Post #2 - Race and the Suburbs Background -->
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
@@ -630,20 +632,28 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+        <!--     <div class="container">
                 <div class="row">
                     <div class="col-lg-14 col-lg-offset-0">
                         <div class="modal-body">
                             <h2>Module 2 - Pollution Through China's Own Lens - Scraping Chinese Social Media</h2>
                             <p class="item-intro text-muted">July 15, 2015</p>
 
-                            <p>Post Pending.</p>
+                            <p>Chinese social media is a big deal.  I went to China a few weeks ago and discovered that social media is not only the channel through which most people communicate, but it is the also how they online shop and pay money, register for events, make phone calls, amongst other things.  Social media apps such as Wechat, QQ, and Weibo are ubiquitous and essential to life in China these days.  Even Apple CEO Tim Cook has <a href = 'http://techcrunch.com/2015/05/11/apple-ceo-tim-cook-joins-weibo-chinas-twitter-like-social-network/#.wreo41:u4iC'> joined Weibo</a>, a move that not only reveals the importance of China to the western economy, but also the centrality of social media in China.  Despite its prevalence, or perhaps because of it, social media also pared with China's infamous control over information.  This can be especially notable when the subject matter is controversial. </p>
+	
+                            <p>In this project, we wanted to look at the portrayal of pollution in China by Chinese people to understand how they see the issue.  In doing so, we also developed a knowledge of censorship in social media, where it is tightly controlled, but also where the censors missed some things. </p>
+								
+							<h4>The Data-Gathering Process</h4>
+                        	<p> We decided to use Weibo, a Twitter-like platform, to gather images of pollution that people captured and posted to the app.  This was partially out of convenience (they have an API) and partially due to the fact that we know Weibo monitors and censors certain topics such as pollution, so we were curious what we'd find.  As it turns out, having an API is better than having nothing, but having an API that has no content search functionality (which it disabled in version 2) esentially means you're out of luck.  So we scrapped the Weibo website instead.  For those of you unfamilar with web-scrapping, it is a technique of gathering data straight from the html code that creates a website.</p>
+
+                        	<img class="img-responsive img-centered" width="60%" src="img/portfolio/module2_chinas_own_lens/weiboscreenshot.png" alt="">
+                                <figcaption>The Fuzziness of Crowd-sourced Datasets</figcaption>
 
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -661,13 +671,18 @@
                 <div class="row">
                     <div class="col-lg-14 col-lg-offset-0">
                         <div class="modal-body">
-                            <h2>Module 2 - Visualizing and Mapping Weibo Data</h2>
+                            <h2>Module 2 - Pollution Through China's Own Lens - Scraping Chinese Social Media</h2>
                             <p class="item-intro text-muted">July 15, 2015</p>
 
-                            <figure>
+                            <!-- <figure>
                             <img class="img-responsive img-centered" src="img/portfolio/module2_visualizing_weibo/visualizing_weibo_main.png" alt="">
-                            </figure>
-                            <h3><a href="chinas-own-lens">View the Application</a></h3>
+                            </figure> -->
+                            <!-- <h3><a href="chinas-own-lens">View the Application</a></h3> -->
+
+	                        <p>Chinese social media is a big deal.  I went to China a few weeks ago and discovered that social media is not only the channel through which most people communicate, but it is the also how they online shop and pay money, register for events, make phone calls, amongst other things.  Social media apps such as Wechat, QQ, and Weibo are ubiquitous and essential to life in China these days.  Even Apple CEO Tim Cook has <a href = 'http://techcrunch.com/2015/05/11/apple-ceo-tim-cook-joins-weibo-chinas-twitter-like-social-network/#.wreo41:u4iC'> joined Weibo</a>, a move that not only reveals the importance of China to the western economy, but also the centrality of social media in China.  Despite its prevalence, or perhaps because of it, social media also pared with China's infamous control over information.  This can be especially notable when the subject matter is controversial. </p>
+
+	                        <p>In this project, we wanted to look at the portrayal of pollution in China by Chinese people to understand how they see the issue.  In doing so, we also developed a knowledge of censorship in social media, where it is tightly controlled, but also where the censors missed some things. </p>
+
                             <p>To allow us further insight into the collected posts, we wanted to develop a rich, visually compelling application that would allow us to view the content of the posts, provide the ability to categorically filter by hashtags, and visualize the geographic spread of the posts. We wanted to allow for a dynamic window into the discussion of pollution as it is taking place on the ground in China through social media, using content provided in the day to day life of Chinese citizens. The visualization provides a view of "pollution through the China's own lens" using citizens as sensors on the ground.</p>
                             <h4>"Pollution Through China's Own Lens"</h4>
                             <p>The solution implemented to meet these needs is an application titled <a href="chinas-own-lens">'Pollution Through China's Own Lens'</a>. The visualization accesses and displays the Weibo post data, allowing for interaction, exploration, and filtering. The visualization is a dual application, one half of it a map displaying the geography of the posts and the images, and the other half a visually engaging gallery, showing larger images and providing further information on each image.</p>
@@ -719,15 +734,28 @@
                                 <img class="img-responsive img-centered" width="60%" src="img/portfolio/module2_visualizing_weibo/pollution-unicorn.png" alt="">
                                 <figcaption>The Fuzziness of Crowd-sourced Datasets</figcaption>
                             </figure>
-                            <p style="margin-top: 25px">The image in the example above is actually tagged as <strong>#smoggy</strong>.</p>
+                            <p style="margin-top: 25px">The image in the example above is actually tagged as <strong>#smoggy</strong>.
                             <figure>
                                 <img class="img-responsive img-centered" width="60%" src="img/portfolio/module2_visualizing_weibo/google-translate.png" alt="">
                                 <figcaption>Translation of a 'non-pollution' post from Google Translate</figcaption>
                             </figure>
-                            <h4 style="margin-top: 25px">"Pollution Through China's Own Lens"</h4>
-                            <h3><a href="chinas-own-lens">View the Application</a></h3>
+							</p>
+                            <h4>The Data-Gathering Process</h4>
+                        	<p> We decided to use Weibo, a Twitter-like microblogging platform, to gather images of pollution that people captured and posted to the app.  This was partially out of convenience (they have an API) and partially due to the fact that we know Weibo monitors and censors certain topics such as pollution, so we were curious what we'd find.  As it turns out, having an API is better than having nothing, but having an API that has no content search functionality (which it disabled in version 2) esentially means you're out of luck.  So we scrapped the Weibo website instead.  For those of you unfamilar with web-scrapping, it is a technique of gathering data straight from the html code that creates a website. </p>
+							
+							<figure>
+							<img class="img-responsive img-centered" width="60%" src="img/portfolio/module2_chinas_own_lens/weiboscreenshot.png" alt="">
+                                <figcaption>Data embedded in the html of a website </figcaption>
+							</figure>
+
+							<p> The hashtags we chose are based on issues we know to be pressing in China.  For instance<a href= 'https://en.wikipedia.org/wiki/Asian_Dust'> "Yellow Dust" </a> refers to the seasonal dust storms in East Asia, which brings sand from the deserts of of Mongolia. It has become a bigger issue in the past few years due to the pollutants contained in the dust.  Another category, "PM2.5", stands for Particulate Matter 2.5, an air pollutant that can come from automotive exhaust as well as other operations that require the burning of fuel.  In Beijing, a city known for its high levels of air pollution, <a href = 'http://aqicn.org/city/beijing/' >the city measures the concentration of PM 2.5 daily </a> as an indication of the air quality outside.  For some of the categories that we scrapped, such as "Pollution" and "Air Polution" didn't get us great results - the Weibo site had only a handful of images for each month.  Other categories such as "Haze" or "Take Pollution Pics", got us dozens of images DAILY.  When we asked our Chinese friends about this, they said that sometimes censors don't catch certain phrases.  Furthermore, sometimes people explicitly use slang to communicate about sensitive issues.  <a href ='http://www.thewire.com/technology/2012/03/slang-chinese-bloggers-use-subvert-censorship/49882/'>This article from The Wire </a> explains a little more about how slang is used to escape censorship.</p>
+
+							<p> After we scrapped the Weibo website, when then kept only the data that were attached to a user ID in order to connect the image to information about the user themself through the Weibo API.  This gave us information such as the user's sex, age, city, followers, etc.  We used the "city" category to map the photos.  As such, the photos are a representation of where the users are from, and not necessarly where they were taken.  Nevertheless, through this process, we  were finally able to create a dataset that reflected a collection of images of how (or sometimes not!) Chinese people understand pollution through pictures.  Many images are face mask selfies, many were just city-scapes, but you barely see the buildings because of the pollution cover.  Relative to other countries, Chinese social media does not tell us too much, but even the small amount of information that it does reveal is powerful. </p>
+
+
+                            <h5><a href="chinas-own-lens">View the Application</a></h5>
                             <p>Click to view the application and explore the visualization to see the social media posts on pollution in China and investigate the impact of pollution on the ground in China and in everyday life for Chinese citizens using social media as our lens.</p>
-                            <p>-Mike</p>
+                            <p>-Mike and Wenfei</p>
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
